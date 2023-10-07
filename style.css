@@ -1,0 +1,391 @@
+:root {
+  --primary: #b6895b;
+  --bg: #010101;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  border-bottom: 0.5px solid var(--primary);
+  background-color: rgba(1, 1, 1, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+.navbar .navbar-menu a {
+  color: #fff;
+  display: inline-block;
+  margin: 0 1rem;
+  font-size: 1.3rem;
+}
+
+.navbar .navbar-menu a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-menu a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-menu a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-icon a {
+  display: inline=block;
+  color: #fff;
+  font-size: 1.3rem;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-icon a:hover {
+  color: var(--primary);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/* hero main */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url(bakground.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(1, 1, 3, 1) 8%,
+    rgba(255, 255, 255, 0) 50%
+  );
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  font-size: 5rem;
+  font-style: italic;
+  text-shadow: 1px 1px 2px var(--bg);
+  line-height: 4.6rem;
+}
+
+.hero .content h1 span {
+  color: var(--primary);
+}
+
+.hero .content p {
+  font-size: 1.5rem;
+  font-weight: 100;
+  margin-top: 0.1rem;
+  mix-blend-mode: difference;
+}
+
+.hero .content a {
+  display: inline-block;
+  font-size: 1.5rem;
+  padding: 1rem 3rem;
+  margin-top: 2rem;
+  color: #fff;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 8px var(--bg);
+}
+
+/* section tentag kami */
+.about,
+.menu,
+.alamat {
+  padding: 8rem 7% 1.4rem;
+}
+
+.about h1,
+.menu h1,
+.alamat h1 {
+  text-align: center;
+  font-size: 2.7rem;
+}
+
+.about h1 span,
+.menu h1 span,
+.alamat h1 span {
+  color: var(--primary);
+}
+
+.about .row {
+  padding: 2rem;
+  display: flex;
+}
+
+.about .row .about-img {
+  flex: 1 1 25rem;
+}
+
+.about .row .about-img img {
+  width: 100%;
+}
+
+.about .row .caption {
+  flex: 1 1 40rem;
+  padding: 0 3rem;
+}
+
+.about .row .caption h3 {
+  font-size: 1.5rem;
+  padding: 2rem 0 1rem;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.about .row .caption h3 span {
+  color: var(--primary);
+}
+
+.about .caption p {
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+  font-weight: 200;
+}
+
+/* menu section  */
+.menu p,
+.alamat p {
+  max-width: 30rem;
+  text-align: center;
+  margin: auto;
+  font-size: 1.2rem;
+  font-weight: 100;
+  line-height: 1.3rem;
+}
+
+.menu .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.menu .row .card-img {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 7px rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  margin: 1.5rem 1rem 2rem 0;
+}
+
+.menu .row .card-tittle {
+  text-align: center;
+  margin: 0.3rem 0 0.5rem;
+  font-weight: 400;
+}
+
+.menu .row .card-price {
+  font-weight: 300;
+}
+
+/* alamat  */
+.alamat .row {
+  display: flex;
+  margin-top: 3.5rem;
+  align-items: center;
+  background-color: rgba(182, 137, 91, 0.2);
+}
+
+.alamat .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.alamat .row form {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.alamat .row form .input-group {
+  display: flex;
+  margin-top: 2rem;
+  text-align: center;
+  padding-left: 2rem;
+  background-color: var(--bg);
+  border: 1px solid #fff;
+}
+
+.alamat .row form .input-group input {
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.7rem;
+  background: none;
+  color: #fff;
+}
+
+.alamat .row button {
+  margin-top: 2rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: #fff;
+  background-color: var(--primary);
+  border-radius: 10px;
+}
+
+footer {
+  background-color: var(--primary);
+  margin-top: 2rem;
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+footer .socials {
+  padding: 1rem 0;
+}
+
+footer .socials a {
+  padding: 2rem 1rem;
+  color: #fff;
+}
+
+footer .socials a:hover,
+footer .links a:hover {
+  color: var(--bg);
+}
+
+footer .links {
+  padding: 0.5rem;
+}
+
+footer .links a {
+  padding: 2rem 1rem;
+  color: #fff;
+}
+
+footer .copy a {
+  font-weight: 700;
+  color: var(--bg);
+}
+
+/* media quire */
+
+/* latop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-menu {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.4s;
+  }
+
+  .navbar .navbar-menu.active {
+    right: 0;
+  }
+
+  .navbar .navbar-menu a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-menu a:hover::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-menu a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .about .row {
+    flex-wrap: wrap;
+  }
+
+  .about .row .about-img img {
+    height: 12rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .about .row .caption {
+    padding: 0;
+  }
+
+  .alamat .row {
+    flex-wrap: wrap;
+  }
+
+  .alamat .row form {
+    padding: 0;
+  }
+}
+
+/* mobile phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
